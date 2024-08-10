@@ -19,7 +19,7 @@ if (isset($_POST['register'])) {
     $name = $_POST['username'];
     $email = $_POST['email'];
     $user_password = $_POST['password'];
-
+    echo("practicing");
     // Use prepared statement to prevent SQL injection
     $stmt = $conn->prepare("INSERT INTO student2 (name, email, password) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $name, $email, $user_password);
